@@ -9,13 +9,12 @@ Create a simple 'Hello World' web application (for example, node.js) and deploy 
 PS - Changed output to "Hello Condé Nast" :) 
 
 # Prerequisites
-AWS account - used free tier account
-Node - v14.6.0
-Docker 
-Terraform  -  v0.12.29
+* AWS account - used free tier account
+* Node - v14.6.0
+* Docker 
+* Terraform  -  v0.12.29
 
 # Overview of the Solution
-I have followed these steps to accomplish this task:
 
 * Created a simple Node app
 * Dockerize the Node app.
@@ -28,7 +27,7 @@ Used Terraform to -
 * Create an AWS ECS service
 * Create a load balancer
 
-# Step 1 - Created the Node App
+### Step 1 - Created the Node App
 create and navigate to application’s directory:
 $ mkdir nodeapp-on-aws-CondeNast
 $ cd nodeapp-on-aws-CondeNast
@@ -59,7 +58,7 @@ console.log(`Running on http://${HOST}:${PORT}`);
 $ node index.js
 app should be running at - http://localhost:3000/
 
-# Step 2 - Dockerize the Node App
+### Step 2 - Dockerize the Node App
 created a Dockerfile
 
 ```sh
@@ -72,11 +71,12 @@ EXPOSE 3000
 CMD [ "node", "node.js" ]
 ```
 
-# Step 3 - Pushed the Node App image to AWS ECR
+### Step 3 - Pushed the Node App image to AWS ECR
 
-# Step 4 Run terraform to provision network and infrastructure components 
+### Step 4 Run terraform to provision network and infrastructure components 
 
-# Directory structure 
+### Directory structure 
+
 ```sh
 ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master) $ tree
 .

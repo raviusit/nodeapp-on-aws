@@ -1,0 +1,10 @@
+.git
+.gitignore/
+node_modules/
+*.tf*
+practiceterraform/
+.terraform/
+Dockerfile
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup

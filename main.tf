@@ -1,3 +1,4 @@
+
 # default VPC
 resource "aws_default_vpc" "default_vpc" {
 }
@@ -14,7 +15,8 @@ resource "aws_default_subnet" "default_subnet_b" {
 resource "aws_default_subnet" "default_subnet_c" {
   availability_zone = "us-east-2c"
 }
-    
+
+
 resource "aws_ecr_repository" "condenast_ecr_repo" {
   name = "condenast_repo"
 }
@@ -23,7 +25,6 @@ resource "aws_ecr_repository" "condenast_ecr_repo" {
 resource "aws_ecs_cluster" "my_cluster" {
   name = "my-cluster"
 }
-
 
 resource "aws_ecs_task_definition" "condenast_task" {
   family                   = "condenast_task"
@@ -154,4 +155,9 @@ resource "aws_security_group" "service_security_group" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+}
+
+# Output the load balanacer DNS as result
+output "App_URL" {
+  value = aws_alb.application_load_balancer.dns_name
 }

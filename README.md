@@ -29,8 +29,12 @@ Used Terraform to -
 
 ### Step 1 - Created the Node App
 create and navigate to application’s directory:
+
 $ mkdir nodeapp-on-aws-CondeNast
+
+
 $ cd nodeapp-on-aws-CondeNast
+
 
 created an npm project:
 $ npm init --y
@@ -55,7 +59,7 @@ app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
 ```
 
-$ node index.js
+$ node node.js
 app should be running at - http://localhost:3000/
 
 ### Step 2 - Dockerize the Node App
@@ -74,6 +78,16 @@ CMD [ "node", "node.js" ]
 ### Step 3 - Pushed the Node App image to AWS ECR
 
 ### Step 4 Run terraform to provision network and infrastructure components 
+```
+Apply complete! Resources: 15 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+App_URL = test-lb-tf-1703002985.us-east-2.elb.amazonaws.com  (This will vary after terraform destroy and apply everytime)
+
+ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master)*$ curl http://test-lb-tf-1703002985.us-east-2.elb.amazonaws.com
+Hello Condé Nast
+```
 
 ### Directory structure 
 
@@ -88,3 +102,4 @@ ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master) $ tree
 └── README.md
 └── variables.tf
 ```
+

@@ -8,6 +8,9 @@ Create a simple 'Hello World' web application (for example, node.js) and deploy 
 
 PS - Changed output to "Hello Condé Nast" :) 
 
+Click here - http://test-lb-tf-1964796265.us-east-2.elb.amazonaws.com
+
+
 # Prerequisites
 * AWS account - used free tier account
 * Node - v14.6.0

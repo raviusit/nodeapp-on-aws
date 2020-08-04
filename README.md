@@ -83,9 +83,9 @@ Apply complete! Resources: 15 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-App_URL = test-lb-tf-1703002985.us-east-2.elb.amazonaws.com  (This will vary after terraform destroy and apply everytime)
+App_URL = test-lb-tf-1964796265.us-east-2.elb.amazonaws.com  
 
-ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master)*$ curl http://test-lb-tf-1703002985.us-east-2.elb.amazonaws.com
+ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master)*$ curl http://test-lb-tf-1964796265.us-east-2.elb.amazonaws.com
 Hello Condé Nast
 ```
 

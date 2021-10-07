@@ -1,12 +1,27 @@
-# Condé Nast Task
+This repo can be used an example how you handle infrastructure day-to-day. 
 
-Here is the context - https://github.com/conde-nast-international/cnid-tech-tests/tree/master/infra-task
+This is a coding exercise for someone who works as an Infrastructure Engineering 
+This whole work can be completed in around 1-2 hours. 
 
-I have chosen # Option 1
+Things that you'll learn by this repo - 
 
-Create a simple 'Hello World' web application (for example, node.js) and deploy it to a Cloud Infrastructure, such as an AWS account, using appropriate tools and best practices. When deployed, the root url should display 'Hello World'.
+An ability to handle code like a software engineer
+Maintainability of solutions
+Containers
+Infrastructure as Code
+Monitoring
+Consideration of CI/CD
+Resilience
+Ability to develop applications locally in a consistent environment
+Concise documentation (please include a README)
+As you must only be interested in the code, I didn't let this project running and in order not to incur any aws costs.
 
-PS - Changed output to "Hello Condé Nast" :) 
+
+Okay, let's begin - 
+
+We are going to create a simple 'Hello World' web application (for example, node.js) and deploy it to a Cloud Infrastructure, such as an AWS account, using appropriate tools and best practices. When deployed, the root url should display 'Hello World'.
+
+PS - Changed output to "Hello" :) 
 
 Click here - http://test-lb-tf-1964796265.us-east-2.elb.amazonaws.com
 
@@ -88,14 +103,14 @@ Outputs:
 
 App_URL = test-lb-tf-1964796265.us-east-2.elb.amazonaws.com  
 
-ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master)*$ curl http://test-lb-tf-1964796265.us-east-2.elb.amazonaws.com
-Hello Condé Nast
+ramaurya@ramaurya-mac nodeapp-on-aws (master)*$ curl http://test-lb-tf-1964796265.us-east-2.elb.amazonaws.com
+Hello World
 ```
 
 ### Directory structure 
 
 ```sh
-ramaurya@ramaurya-mac nodeapp-on-aws-CondeNast (master) $ tree
+ramaurya@ramaurya-mac nodeapp-on-aws (master) $ tree
 .
 ├── Dockerfile
 ├── main.tf
